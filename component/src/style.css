@@ -1,0 +1,77 @@
+    /* Reset & Base Styles */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: Arial, sans-serif; 
+      color: #fff; 
+      /* Darker blue gradient background */
+      background: linear-gradient(45deg, #0d47a1, #1565c0, #0d47a1);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    /* Container styling */
+    .maintenance-container {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+    /* Header with logo and social media links */
+    .header {
+      position: absolute;
+      top: 20px;
+      width: 100%;
+      left: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 40px;
+    }
+    .logo img {
+      width: 100px;
+      animation: logoBounce 2s infinite;
+    }
+    @keyframes logoBounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .social-media a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 15px;
+      font-size: 24px;
+      transition: color 0.3s;
+    }
+    .social-media a:hover {
+      color: #ffeb3b;
+    }
+    /* Main content styling */
+    .content {
+      animation: fadeIn 2s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    h1 {
+      font-size: 60px;
+      margin-bottom: 20px;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    .countdown {
+      font-size: 30px;
+      font-weight: bold;
+    }
